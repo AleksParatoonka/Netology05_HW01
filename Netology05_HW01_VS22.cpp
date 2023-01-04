@@ -9,9 +9,9 @@ using namespace std;
 
 int main()
 {
-    //std::cout << "Hello World!\n";
+    
     int size_01 = 1, size_02 = 1;
-    //std::cout << "Hello World!\n";
+    
     std::ifstream fin("in.txt");// пытаемся открыть файл  
     std::ofstream fout("out.txt");
     if (!fin.is_open())
@@ -25,7 +25,7 @@ int main()
     size_01 = std::stoi(s);
     int* arr_01 = new int[size_01]();
     fin >> s;
-    //int test = std::stoi(s);
+    
     arr_01[size_01 - 1] = std::stoi(s);
 
     for (int i = 0; i < size_01 - 1; i++) {
@@ -82,6 +82,8 @@ int main()
             fout << std::endl;
         }
     }
+    delete[] arr_01;
+    delete[] arr_02;
     fout.close();
 }
 
